@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<style>
+body {
+	background: url("wallpaper.png") ;
+
+	text-align: center;
+	padding-top: 130px;
+}
+
+form {
+	display: inline-block;
+}
+</style>
+<body style="color:white ;font-family:Times New Roman;font-size:19px">
+
+	<form method="post" action="AddRegisterationServlet">
+		<table>
+			<tbody>
+				<tr align="center">
+					<td style="color: black" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<h4>Register</h4>
+					</td>
+					<td></td>
+				</tr>
+				<tr align="left">
+					
+				</tr>
+				<tr align="left">
+					<td style="color: black">Name :</td>
+					<td><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				<tr>
+				<tr align="left">
+					<td style="color: black">Phone no :</td>
+					<td><input type="number" name="phone" required></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr align="left">
+					<td style="color: black">EmailId :</td>
+					<td><input type="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr align="left">
+					<td style="color: black">Password :</td>
+					<td><input type="password" name="password" required></td>
+				</tr>
+				
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr align="left">
+					<td style="color: black">DeptName</td>
+					<td><input type="text" name="deptname" required></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				<tr>
+				<tr align="left">
+					<td style="color: black">Experience:</td>
+					<td><input type="number" name="experience	" required></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit" style="width: 100px">Sign Up</button> <br></td>
+				</tr>
+
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
