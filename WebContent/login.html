@@ -13,8 +13,26 @@
 }
 
 body {
+	margin: 0;
+}
+
+.hero-image {
+	background-image: url("job-hunting.jpg");
+	background-color: #cccccc;
+	height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-text {
 	text-align: center;
-	padding-top: 230px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
 }
 
 form {
@@ -22,55 +40,55 @@ form {
 }
 </style>
 </head>
-<body bgcolor="white">
-	<form method="post" action="LoginServelt">
-		
-		
-		<table>
-			<tbody>
-				<tr align="center">
-					<td style="color: black" colspan="2" style="padding-top:50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					JOBPORTAL</td>
-					<td></td>
-				</tr>
+<body style="font-family: Times New Roman; font-size: 19px">
+	<div class="hero-image">
+		<div class="hero-text">
+			<form method="post" action="LoginServlet">
 
 
-				<tr>
+				<table>
+					<tbody>
+						<tr align="center">
+							<td style="color: black" colspan="2" style="padding-top: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<b>JOBPORTAL</b><td>
+							<td></td>
+						</tr>
 
 
-					<td style="color: black">Phone no :</td>
-					<td><input type="number" name="phone" required></td>
+						<tr>
 
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
 
-				<tr>
-					<td style="color: black">Password :</td>
-					<td><input type="password" name="password" required></td>
-				</tr>
-				<tr>
-					<td><a href="register.html">New User</a></td>
-					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="forgetpassword.html">forget password ?</a>
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><button type="submit" style="width: 100px">Login</button>
-						<br></td>
-				</tr>
+							<td style="color: black"><b>Phone no :</b></td>
+							<td><input type="number" name="phone" required></td>
 
-			</tbody>
-		</table>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
 
-	</form>
+						<tr>
+							<td style="color: black"><b>Password :</b></td>
+							<td><input type="password" name="password" required></td>
+						</tr>
+						<tr>
+							<td><a href="register.html"><b>New User</b></a></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="forgetpassword.html"><b>Forget Password ?</b></a>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+						
+						<tr>
+							<td></td>
+							<td><button type="submit" style="width: 100px">Login</button>
+								<br></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

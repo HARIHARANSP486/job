@@ -14,7 +14,7 @@ import com.chainsys.jobportal.model.Admin;
 
 
 @WebServlet("/AddJobServelt")
-public class AddJobServelt extends HttpServlet {
+public class AddJobServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    

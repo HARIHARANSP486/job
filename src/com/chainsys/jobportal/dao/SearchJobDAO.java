@@ -35,6 +35,75 @@ public class SearchJobDAO {
 			return admin;
 			
 	}
+	public Admin searchLocation(String jobLocation) throws SQLException
+	{
+		Connection connection=ConnectionUtil.getConnection();
+		String sql="select vacancy_dept,vacancy_details,job_location,company_name from admin where job_location=?";
+		PreparedStatement preparedStatement=connection.prepareStatement(sql);
+		preparedStatement.setString(1,jobLocation);
+		ResultSet rset=preparedStatement.executeQuery();
+		Admin admin=null;
+		if(rset.next())
+		{
+			admin=new Admin();
+			admin.setVacancyDept(rset.getString("vacancy_dept"));
+			admin.setVacancyDetails(rset.getString("vacancy_details"));
+			admin.setJobLocation(rset.getString("job_location"));
+			admin.setCompanyName(rset.getString("company_name"));
+		}
+		else
+		{
+			System.out.println("JOBLOCATION ERROR");
+		}
+		return admin;
+		
+	}
+	public Admin searchCompany(String companyName) throws SQLException
+	{
+		Connection connection=ConnectionUtil.getConnection();
+		String sql="select vacancy_dept,vacancy_details,job_location,company_name from admin where company_name=?";
+		PreparedStatement preparedStatement=connection.prepareStatement(sql);
+		preparedStatement.setString(1,companyName);
+		ResultSet result=preparedStatement.executeQuery();
+		Admin admin=null;
+		if(result.next())
+		{
+			admin=new Admin();
+			admin.setVacancyDept(result.getString("vacancy_dept"));
+			admin.setVacancyDetails(result.getString("vacancy_details"));
+			admin.setJobLocation(result.getString("job_location"));
+			admin.setCompanyName(result.getString("company_name"));
+		}
+		else
+		{
+			System.out.println("COMPANY NAME ERROR");
+		}
+		return admin;
+		
+	}
+	public Admin searchVacancy(String vacancyDetails) throws SQLException
+	{
+		Connection connection=ConnectionUtil.getConnection();
+		String sql="select vacancy_dept,vacancy_details,job_location,company_name from admin where vacancy_details=?";
+		PreparedStatement preparedStatement=connection.prepareStatement(sql);
+		preparedStatement.setString(1,vacancyDetails);
+		ResultSet rSet=preparedStatement.executeQuery();
+		Admin admin=null;
+		if(rSet.next())
+		{
+			admin=new Admin();
+			admin.setVacancyDept(rSet.getString("vacancy_dept"));
+			admin.setVacancyDetails(rSet.getString("vacancy_details"));
+			admin.setJobLocation(rSet.getString("job_location"));
+			admin.setCompanyName(rSet.getString("company_name"));
+		}
+		else
+		{
+			System.out.println("COMPANY NAME ERROR");
+		}
+		return admin;
+		
+	}
 		
 		
 	
