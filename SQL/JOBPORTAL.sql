@@ -38,7 +38,5 @@ ALTER TABLE REGISTER ADD CONSTRAINT email_unique UNIQUE(EMAIL);
 DESC REGISTER;
 ALTER TABLE ADMINREGISTRATION ADD CONSTRAINT emailadmin_unique UNIQUE(EMAIL_ID);
 DESC ADMINREGISTRATION;
-insert into ADMINREGISTRATION(id,admin_id,admin_name,email_id,phone_number,password) 
-values(adminregistration_id_seq.NEXTVAL,101,'Hariharan','hariharanece486@gmail.com',96592624266,'harisp123456');
 commit;
 select * from admin;
