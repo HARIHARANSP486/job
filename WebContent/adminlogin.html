@@ -11,8 +11,29 @@
 }
 
 body {
+	margin: 0;
+}
+.hero-image {
+	background-image: url("job-hunting.jpg");
+	background-color: #cccccc;
+	height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-text {
 	text-align: center;
-	padding-top: 230px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+form {
+	display: inline-block;
 }
 
 form {
@@ -20,8 +41,10 @@ form {
 }
 </style>
 </head>
-<body>
-<body bgcolor="white">
+<body style="font-family: Times New Roman; font-size: 19px">
+
+<div class="hero-image">
+		<div class="hero-text">
 	<form method="post" action="AdminLoginServlet">
 		
 		
@@ -29,7 +52,7 @@ form {
 			<tbody>
 				<tr align="center">
 					<td style="color: black" colspan="2" style="padding-top:50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					ADMINLOGIN</td>
+					<b>ADMINLOGIN</b></td>
 					<td></td>
 				</tr>
 
@@ -37,7 +60,7 @@ form {
 				<tr align="left">
 
 
-					<td style="color: black">Phone number :</td>
+					<td style="color: black"><b>Phone number :</b></td>
 					<td><input type="number" name="phone" required></td>
 
 				</tr>
@@ -46,23 +69,36 @@ form {
 				</tr>
 
 				<tr align="left">
-					<td style="color: black">Password :</td>
+					<td style="color: black"><b>Password :</b></td>
 					<td><input type="password" name="password" required></td>
 				</tr>
+				</tbody>
+				</table>
+				<table>
+				<tbody>
+				
+				
 				<tr>
-					<td>&nbsp;</td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="adminforgotpassword.html"><b>Forgot Password ?</b></a>
+							</td>
+							<tr>
 				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
+				</tbody>
+				</table>
+				<table>
+				<tbody>
+				
+				
 				<tr>
 					<td></td>
-					<td><button type="submit" style="width: 100px">Login</button>
+					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" style="width: 100px">Login</button>
 						<br></td>
 				</tr>				
 				</tbody>
 				</table>
 				</form>
-
+				</div>
+</div>
 </body>
 </html>

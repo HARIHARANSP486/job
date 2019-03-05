@@ -9,13 +9,13 @@
 <style>
 .display {
 	position: absolute;
-	top: 37%;
+	top: 30%;
 	left: 22%;
 }
 
 body {
 	text-align: center;
-	padding-top: 230px;
+	padding-top: 150px;
 }
 
 form {
@@ -23,8 +23,8 @@ form {
 }
 </style>
 </head>
-<body bgcolor="white">
-	<form method="post" action="AddJobServelt">
+<body BGCOLOR="PINK">
+	<form method="post" action="AddJobServlet">
 		
 		
 		<table>
@@ -39,63 +39,92 @@ form {
 				</tr>
 
 							<tr align="left">
-								<td>ADMIN ID:</td>
-								<td><input type="number" name="adminId"></td>
+								<td><b>ADMIN ID:</b></td>
+								<td><input type="number" name="adminId" required></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td></td>
 							</tr>
 							<tr align="left">
-							<td>ADMIN NAME:</td>
-							<td><input type="text" name="adminName"></td>
+							<td><b>ADMIN NAME:</b></td>
+							<td><input type="text" name="adminName" required></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td></td>
 							</tr>
 							<tr align="left">
-							<td>VACANCY DEPT:</td>
-							<td><input type="text" name="vacancyDept"></td>
+					<td class="select"><b>VACANCY DEPT :</b></td>
+					<td><select name="vacancyDept" required>
+					<option value="B.E - Computer Science Engineering">B.E - Computer Science Engineering</option>
+					<option value="B.E - Information Technology">B.E - Information Technology</option>
+					<option value="B.E - Electronics and Communication Engineering">B.E - Electronics and Communication Engineering</option>
+					<option value="B.E - Electrical and Electronics  Engineering">B.E - Electrical and Electronics  Engineering</option>
+					<option value="B.E - Mechanical Engineering">B.E - Mechanical Engineering</option>
+					<option value="B.E-  Mining Engineering">B.E - Mining Engineering</option>
+					<option value="B.E- Automobile Engineering">B.E - Automobile Engineering</option>
+					<option value="B.E- Civil Engineering">B.E - Civil Engineering</option>
+					<option value="B.E- OTHERS">B.E - Other Department</option>
+					<option value="B.Sc- Computer Science">B.Sc - Computer Science</option>
+					<option value="B.Sc- Information Technology">B.Sc - Information Technology</option>
+					<option value="B.Sc- OTHERS">B.Sc - Others</option>
+					<option value="M.Sc- Computer Science">M.Sc - Computer Science</option>
+					<option value="M.Sc- Information Technology">M.Sc - Information Technology</option>
+					<option value="M.Sc- OTHERS">M.sc - Others</option>
+					<option value="B.C.A">B.C.A</option>
+					<option value="M.C.A">M.C.A</option>
+					<option value="OTHERS">OTHERS COURSES</option>
+					
+					
+					
+					
+					
+					</select></td>
+				</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr align="left">
+							<td><b>VACANCY DETAILS:</B></td>
+							<td><input type="text" name="vacancyDetails" required></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td></td>
 							</tr>
 							<tr align="left">
-							<td>VACANCY DETAILS:</td>
-							<td><input type="text" name="vacancyDetails"></td>
+							<td><b>JOB LOCATION:</b></td>
+							<td><input type="text" name="jobLocation" required></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td></td>
 							</tr>
 							<tr align="left">
-							<td>JOB LOCATION:</td>
-							<td><input type="text" name="jobLocation"></td>
+							<td><b>COMPANY NAME:</b></td>
+							<td><input type="text" name="companyName" required></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td></td>
 							</tr>
 							<tr align="left">
-							<td>COMPANY NAME:</td>
-							<td><input type="text" name="companyName"></td>
+							<td><b>REFERENCE NUMBER:</b></td>
+							<td><input type="number" name="phoneNumber" required></td>
 							</tr>
+							</tbody>
+							</table>
+							<table>
+							<tbody>
 							<tr>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr align="left">
-							<td>PHONE NUMBER:</td>
-							<td><input type="number" name="phoneNumber"></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<button style="width: 100px;" type="submit">Add</button>
+								<td></td><br>
+								<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="width: 100px;" type="submit">Add</button>
 								</td>
 							</tr>
+							<tbody>
 							</table>
 							</form>
 							

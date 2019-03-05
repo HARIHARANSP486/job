@@ -1,7 +1,6 @@
 package com.chainsys.jobportal.controller;
 
 import java.io.IOException;
-
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -15,33 +14,31 @@ import com.chainsys.jobportal.dao.FindAllDAO;
 import com.chainsys.jobportal.model.Admin;
 
 
-@WebServlet("/SearchJobServlet")
-public class SearchJobServlet extends HttpServlet {
+@WebServlet("/SearchJobVacancy")
+public class SearchJobVacancy extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String deptName = request.getParameter("deptname");
-		System.out.println(deptName);
-		//SearchJobDAO searchjobDAO=new SearchJobDAO();
+		String jobvacancy=request.getParameter("jobvacancy");
+		System.out.println(jobvacancy);
 		FindAllDAO findallDAO=new FindAllDAO();
-		//Admin admin=new Admin();
-		//admin.setVacancyDept(deptName);
 		try
 		{
-		List<Admin> adminlist=	findallDAO.findAll(deptName);
+			List<Admin> adminlist=findallDAO.searchVacancy(jobvacancy);
+			System.out.println(adminlist);
 			request.setAttribute("JOBS", adminlist);
 			
-			RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("listvacancy.jsp");
 			rd.forward(request,response);
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
+
 		}
-		
-		
-		
+	
+	
 	
 	}
 

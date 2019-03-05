@@ -1,4 +1,4 @@
-package com.chainsys.jobportal.controller;
+ package com.chainsys.jobportal.controller;
 
 import java.io.IOException;
 
@@ -13,38 +13,33 @@ import com.chainsys.jobportal.dao.RegisterDAO;
 import com.chainsys.jobportal.model.Register;
 import com.chainsys.jobportal.validator.LoginValidator;
 
-
 @WebServlet("/LoginServelt")
-public class LoginServelt extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		long phone = Long.parseLong(request.getParameter("phone"));
 		String password = request.getParameter("password");
-		Register register=new Register();
+		Register register = new Register();
 		register.setPhonenumber(phone);
 		register.setPassword(password);
 		System.out.println(register.getPhonenumber());
 		System.out.println(register.getPassword());
-		RegisterDAO registerDAO=new RegisterDAO();
-		try
-		{
-			LoginValidator validator=new LoginValidator();
-			validator.loginValidator(register);
-			registerDAO.checkLogin(register);
-			RequestDispatcher req = request.getRequestDispatcher("home.jsp");
-			req.forward(request, response);
-			
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-			RequestDispatcher req = request.getRequestDispatcher("login.html");
+		RegisterDAO registerDAO = new RegisterDAO();
+		if (registerDAO.checkLogin(register)) {
+		RequestDispatcher req = request
+						.getRequestDispatcher("searchhome.html");
+				req.forward(request, response);
+		}
+		else{
+			RequestDispatcher req = request
+					.getRequestDispatcher("loginfailure.html");
 			req.forward(request, response);
 		}
-		
-	
+
+	}
 	}
 
-}
+
 

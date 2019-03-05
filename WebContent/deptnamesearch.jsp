@@ -7,28 +7,54 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body style="font-family: Times New Roman; font-size: 19px">
+<style>
+.display {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+}
 
-	<div align="left" style="width: 600px;">
-		Your successfully logged in <a href="login.html">Logout</a>
-	</div>
+
+body
+{
+	background-image: url("system-background.jpg") ;
+	background-repeat:no-repeat;
+	background-position: center center;
+text-align: center;
+
+padding-left:350px;
+font-family: Times New Roman;
+font-size: 19px
+}
+
+
+form {
+	display: inline-block;
+}
+
+</style>
+<body >
+
+<div style="padding-left:890px">
+ <a href="login.html">Logout</a>
+ </div>
 	<table>
 
 
 
 		<tr>
 			<td>
-				<div align="center" style="width: 600px">
+				<div align="center" style="width: 600px; padding-top: 150px">
 					<form method="post" action="SearchJobServlet">
 						<h2>Search job:</h2>
 						<table>
 							<tr>
-								<td class="select">Department Name :</td>
-								<td><select name="deptname" >
+								<td class="select"><b>DepartmentName :</b></td>
+								<td ><select name="deptname" >
 								<option value="B.E - Computer Science Engineering">B.E - Computer Science Engineering</option>
 								<option value="B.E - Information Technology">B.E - Information Technology</option>
 					<option value="B.E - Electronics and Communication Engineering">B.E - Electronics and Communication Engineering</option>
-					<option value="B.E - ELectrical and Electronics  Engineering">B.E - ELectrical and Electronics  Engineering</option>
+					<option value="B.E - Electrical and Electronics  Engineering">B.E - Electrical and Electronics  Engineering</option>
 					<option value="B.E - Mechanical Engineering">B.E - Mechanical Engineering</option>
 					<option value="B.E-  Mining Engineering">B.E - Mining Engineering</option>
 					<option value="B.E- Automobile Engineering">B.E - Automobile Engineering</option>
@@ -52,7 +78,7 @@
 								
 							
 					
-					<td><button type="submit" style="width: 100px">SUBMIT</button> <br></td>
+					<td><button type="submit" style="width: 100px"><b>SUBMIT</b></button> <br></td>
 				
 						</table>
 					</form>
@@ -60,5 +86,8 @@
 			</td>
 		</tr>
 </table>
+</div>
+</div>
 </body>
+
 </html>

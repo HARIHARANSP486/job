@@ -10,6 +10,7 @@ import com.chainsys.jobportal.util.ConnectionUtil;
 
 public class AdminDAO {
 	public void addDetails(Admin admin) throws Exception{
+		System.out.println(admin.getVacancyDept());
 		try
 	{
 		Connection connection = ConnectionUtil.getConnection();
@@ -19,6 +20,7 @@ public class AdminDAO {
 		preparedstatement.setInt(1, admin.getAdminId());
 		preparedstatement.setString(2, admin.getAdminName());
 		preparedstatement.setString(3, admin.getVacancyDept());
+		System.out.println(admin.getVacancyDept());
 		preparedstatement.setString(4, admin.getVacancyDetails());
 		preparedstatement.setString(5, admin.getJobLocation());
 		preparedstatement.setString(6, admin.getCompanyName());
